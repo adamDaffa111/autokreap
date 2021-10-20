@@ -8,11 +8,26 @@
   <title>auto krapelin</title>
 </head>
 <body>
+  <div id="app">
   <main>
     <content>
       <div class="column">
-        <span> jumlah kolom </span>
-        <input type="number" placeholder="masukan jumlah kolom" id="columnNumber" />
+        <span> setting </span>
+        <div class="settings">
+          <div class="form-group">
+            <input type="radio" name="test" data-test="krapelin" id="krapelin" checked/><label for="krapelin"> krapelin </label>
+          </div>
+          <div class="form-group">
+            <input type="radio" name="test"  data-test="pauli" id="pauli"/> <label for="pauli"> pauli </label>
+          </div>
+          <div class="form-group">
+            <input type="number" placeholder="masukan jumlah kolom" id="columnNumber"/>
+            <input type="number" placeholder="jumlah waktu interval" id="intervalTime"/>
+          </div>
+        </div>
+      </div>
+      <div id="totalTime"> 
+         <span> total waktu: <strong> 0 menit 00 detik </strong></span>
       </div>
       <div id="countdown-container">
         <h1></h1>
@@ -22,6 +37,8 @@
       </div>
     </content>
   </main>
+  </div>
+
   <audio class="move-sound">
     <source src="audio/Pindah.ogg" type="audio/ogg">
     <source src="audio/Pindah.mp3" type="audio/mpeg">
